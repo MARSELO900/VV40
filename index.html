@@ -3,68 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vv40 - Progetto in arrivo</title>
+    <title>vv40 - Il Futuro è Qui</title>
     <style>
-        /* Questo è il CSS: decide come appare visivamente la pagina (colori, spazi, ecc.) */
+        /* CSS: Regole generali per tutta la pagina */
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* --- Barra di navigazione in alto --- */
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px 50px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            height: 100vh; /* Fa in modo che la pagina occupi tutto lo schermo */
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #e94560; /* Colore rosso/rosato */
+        }
+
+        /* --- Sezione Principale (Hero) --- */
+        .hero {
+            background: linear-gradient(135deg, #16213e, #0f3460);
+            color: white;
             text-align: center;
+            padding: 100px 20px;
         }
 
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            max-width: 500px;
-            width: 90%;
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
         }
 
-        h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        .hero p {
+            font-size: 1.2em;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto 40px auto; /* Centra il testo e lascia spazio sotto */
+            line-height: 1.5;
         }
 
-        p {
+        /* Bottone principale */
+        .btn {
+            background-color: #e94560;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
             font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+        }
+
+        /* Effetto quando passi il mouse sul bottone */
+        .btn:hover {
+            background-color: #d13d56;
+            transform: scale(1.05); /* Ingrandisce leggermente il bottone */
+        }
+
+        /* --- Sezione delle Caratteristiche (Cards) --- */
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Permette alle schede di andare a capo sui telefoni */
+            gap: 30px; /* Spazio tra le schede */
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto; /* Centra la sezione nella pagina */
+        }
+
+        /* Stile per la singola scheda */
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        /* Effetto quando passi il mouse sulla scheda */
+        .card:hover {
+            transform: translateY(-10px); /* Fa "saltare" la scheda verso l'alto */
+        }
+
+        .card h3 {
+            color: #0f3460;
+            margin-bottom: 15px;
+        }
+
+        .card p {
             color: #666;
             line-height: 1.6;
-            margin-bottom: 30px;
         }
 
-        .button {
-            background-color: #3498db;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #2980b9;
+        /* --- Piè di pagina (Footer) --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #1a1a2e;
+            color: #777;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <!-- Questo è l'HTML: decide il contenuto vero e proprio della pagina (testi, bottoni, ecc.) -->
-    <div class="container">
-        <h1>vv40</h1>
-        <p>Stiamo costruendo qualcosa di speciale. La landing page ufficiale del progetto vv40 sarà presto online.</p>
-        <a href="#" class="button">Scopri di più in futuro</a>
-    </div>
+    <!-- Intestazione del sito -->
+    <header>
+        <div class="logo">vv40</div>
+        <div>
+            <!-- Qui in futuro potrai aggiungere dei link -->
+            <span>Vercel + GitHub + VS Code</span>
+        </div>
+    </header>
+
+    <!-- Parte principale visibile appena si entra -->
+    <main>
+        <section class="hero">
+            <h1>Benvenuto in vv40</h1>
+            <p>Un progetto rivoluzionario creato in pochi minuti. Scopri come il web design moderno unito agli strumenti giusti può trasformare le tue idee in realtà.</p>
+            <a href="#scopri" class="btn">Inizia l'esplorazione</a>
+        </section>
+
+        <!-- Sezione con le tre schede descrittive -->
+        <section id="scopri" class="features">
+            <div class="card">
+                <h3>🚀 Velocità</h3>
+                <p>Progettato per essere leggero e caricarsi istantaneamente su qualsiasi dispositivo.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Design Elegante</h3>
+                <p>Colori moderni, ombre morbide e un layout pulito che cattura l'attenzione.</p>
+            </div>
+            <div class="card">
+                <h3>⚙️ Semplice</h3>
+                <p>Nessun framework complesso. Solo HTML e CSS puri, facili da leggere e modificare.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Piè di pagina -->
+    <footer>
+        <p>&copy; 2026 Progetto vv40. Creato con passione.</p>
+    </footer>
 
 </body>
 </html>
